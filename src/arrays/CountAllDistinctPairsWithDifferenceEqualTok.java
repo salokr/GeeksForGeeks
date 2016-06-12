@@ -100,13 +100,13 @@ public class CountAllDistinctPairsWithDifferenceEqualTok
         for(int i=0;i<keys.length;i++)
         {
             int current=(int)keys[i];
-            if(set.contains(current+k))//MERGE BOTH CONDITIONS TO ONE IF ONLY COUNT REQUIRED
+            if(set.contains(current+k))//MERGE BOTH CONDITIONS (written below) TO ONE IF ONLY COUNT REQUIRED with OR condition
             {
-                //System.out.print(current+" "+(current+k)+" ");
+                //System.out.print(current+" "+(current+k)+" ");//uncomment it to get pairs also
                 count++;
             }
             if(set.contains(current-k))//MERGE BOTH CONDITIONS TO ONE IF ONLY COUNT REQUIRED
-                //System.out.print((current-k)+" "+current+" ");
+                //System.out.print((current-k)+" "+current+" ");//uncomment it to get pairs also
                 count++;
             set.remove(current);
         }
@@ -153,13 +153,13 @@ public class CountAllDistinctPairsWithDifferenceEqualTok
                 //System.out.print(current+" "+(current+k)+" ");
                 int freq1=table.get(current);
                 int freq2=table.get(current+k);
-                count+=freq1*freq2;
+                count+=freq1*freq2;//you know why :D
             }
             if(table.containsKey(current-k)){
                 //System.out.print((current-k)+" "+current+" ");
                 int freq1=table.get(current);
                 int freq2=table.get(current-k);
-                count+=freq1*freq2;}
+                count+=freq1*freq2;}//you know why :D
             table.remove(current);
         }
         System.out.println(count);
