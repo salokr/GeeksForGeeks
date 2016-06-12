@@ -5,6 +5,10 @@
  */
 package arrays;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+
 /**
  *
  * @author ashutosh
@@ -27,5 +31,21 @@ Output: 1
 
 public class PrintAllDistinctElementsOfaGivenIntegerArray 
 {
-    
+    public static void printDistinct(int a[])
+    {
+        HashSet<Integer> map=new HashSet<Integer>();
+        for(int i=0;i<a.length;i++)
+        {
+            if(!map.contains(a[i]))
+                map.add(a[i]);
+        }
+        Object[] vals=map.toArray();
+        for(Object o:vals)
+            System.out.print(o+",");
+    }
+    public static void main(String[] args)
+    {
+       int arr[] = {12, 10, 9, 45, 2, 10, 10, 45};
+        printDistinct(arr);
+    }
 }
