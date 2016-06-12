@@ -35,9 +35,9 @@ public class MaximumSumPath
             }
         }
         while(i<n1)
-        sum1+=a[i++];
+            sum1+=a[i++];
         while(j<n2)
-        sum2+=b[j++];
+            sum2+=b[j++];
         result+=sum1>sum2?sum1:sum2;
         System.out.println(result);
     }
