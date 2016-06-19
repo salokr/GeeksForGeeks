@@ -5,62 +5,87 @@
  */
 package arrays;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeMap;
+
+import java.util.*;
 
 /**
  *
  * @author ashutosh
  */
+
+
 public class SortByFrequency 
 {
     public static void doSorting(int a[])
     {
-        TreeMap<Data,Integer> map=new TreeMap<>(new Comparator<Data>(){
-
-            @Override
-            public int compare(Data o1, Data o2) {
-                return o1.freq-o2.freq; //To change body of generated methods, choose Tools | Templates.
-            }
-        });
+        Hashtable<Integer,Integer> table=new Hashtable<>();
         for(int i=0;i<a.length;i++)
         {
-            Data d=new Data(a[i]);
-            if(!map.containsValue(a[i]))
-                map.put(d,a[i]);
-            else
-            {
-                
-            }
-            
+            if(!table.containsKey(a[i]))
+                table.put(a[i],0);
+            int freq=table.get(a[i]);
+            table.remove(a[i]);
+            table.put(a[i], freq+1);
         }
-        Set<Data> keyset=map.keySet();
-        for(Data n:keyset)
-            System.out.println(map.get(n)+" ");
+        Data[] temp=new Data[table.size()];
+        Object[] keyset=table.keySet().toArray();
+        for(int i=0;i<keyset.length;i++)
+        {
+            int key=Integer.parseInt(""+keyset[i]);
+            temp[i]=new Data(key,table.get(key));
+            System.out.println(temp[i]);
+        }
+        Arrays.sort(temp,new Comparator<Data>()
+        {
+
+            @Override
+            public int compare(Data o1, Data o2) 
+            {
+                if(o1.freq==o2.freq)
+                {
+                    if(o1.data>o2.data)
+                    return 1;
+                    else return -1;
+                }
+                else return o2.freq-o1.freq;
+            }
+        });
+        for(int i=0;i<temp.length;i++)
+        {
+            int key=temp[i].data;
+            int freq=table.get(key);
+            for(int j=0;j<freq;j++)
+                System.out.print(key+" ");
+        }
     }
+    
     public static void main(String[] args)
     {
-        int a[]={2, 3, 2, 4, 5, 12, 2, 3, 3, 3, 12};
-        doSorting(a);
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t>0)
+        {
+            int n=sc.nextInt();
+            int a[]=new int[n];
+            for(int i=0;i<n;i++)
+                a[i]=sc.nextInt();
+            doSorting(a);
+            System.out.println();
+            t--;
+        }
     }
 }
 class Data
 {
     int data;
     int freq;
-    public Data(int n)
+    public Data(int n,int freq)
     {
         this.data=n;
-        freq=1;
-    }
-    public void increaseFreq()
-    {
-        freq++;
+        this.freq=freq;
     }
     public String toString()
     {
-        return ""+freq;
+        return data+"";
     }
 }
