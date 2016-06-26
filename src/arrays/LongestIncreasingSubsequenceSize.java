@@ -206,7 +206,7 @@ public class LongestIncreasingSubsequenceSize
             {
                 //find the element which is largest but smaller than current element in solution array.
                 //linear search will result in O(n^2) solution try binary search, rememeber if this list is result then it will cross the solution array till now in future.
-                //int ceill=getCeilIndex(sol, solsize, a[i]);
+                //int ceill=getCeilIndex(sol, solsize, a[i]);<----Linear Search Solution
                 int ceil=getCeil(sol,0,solsize-1,a[i]);
                 sol[ceil+1]=a[i];
                 

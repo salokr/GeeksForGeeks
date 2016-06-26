@@ -29,6 +29,7 @@ Expected time complexity is O(n).
 
 public class RearrangeInMaxMinForm 
 {
+    /*O(n) Extra Space*/
     public static void rearrange(int a[])
     {
         int n=a.length;
