@@ -32,16 +32,21 @@ public class FindTheMaximumElementInAnArrayWhichIsFirstIncreasingAndThenDecreasi
 //I THINK A SIMPLE BINARY SEARCH WILL DO THE WORK
     public static int getValue(int a[],int beg,int end)
     {
-        if(beg>end)
-            return -1;
         if(beg==end)
             return a[beg];
+        if(end-beg==1)
+        {
+            if(a[beg]>a[end])
+                return a[beg];
+            else
+                return a[end];
+        }
         int mid=(beg+end)/2;
-        if(mid-1>beg&&mid+1<=end&&a[mid]>a[mid-1]&&a[mid]>a[mid+1])
+        if(a[mid-1]<a[mid]&&a[mid]>a[mid+1])
             return a[mid];
-        else if(a[mid]>a[mid-1])//still increasing 
+        else if(a[mid]>a[mid-1]&&a[mid]<a[mid+1])
             return getValue(a, mid+1, end);
-        else return getValue(a, beg, mid-1);
+        else return getValue(a,beg,mid-1);
     }
     public static void main(String[] args)
     {
