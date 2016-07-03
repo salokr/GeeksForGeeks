@@ -35,17 +35,26 @@ class MaximumOfAllSubarraysOfSizek
 {
     public static void findAllMax(int a[],int k)
     {
-        int max=Integer.MIN_VALUE;
+        Deque<Integer> deque =new ArrayDeque<>(k);
         for(int i=0;i<k;i++)
-        if(max<a[i])
-        max=a[i];
+        {
+            int current=a[i];
+            while(!deque.isEmpty()&&a[deque.peekFirst()]<=current)
+                deque.pollFirst();
+            deque.addFirst(i);
+            
+        }
         for(int i=k;i<a.length;i++)
         {
-            System.out.print(max+" ");
-            if(a[i]>max)
-            max=a[i];
+            System.out.print(a[deque.peekLast()]+" ");
+            if(!deque.isEmpty()&&deque.peekLast()>=i-k)
+                deque.pollLast();
+            int current=a[i];
+            while(!deque.isEmpty()&&a[deque.peekFirst()]<current)
+                deque.pollFirst();
+            deque.addFirst(i);
         }
-        System.out.println(max);
+        System.out.println(deque.pollLast());
     }
 	public static void main (String[] args) 
 	{
