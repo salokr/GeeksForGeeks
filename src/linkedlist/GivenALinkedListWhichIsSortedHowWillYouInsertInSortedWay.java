@@ -42,6 +42,7 @@ public class GivenALinkedListWhichIsSortedHowWillYouInsertInSortedWay
         {
             int n=sc.nextInt();
             addSorted(ll,n);
+            t--;
         }
     }
 }
