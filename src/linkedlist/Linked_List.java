@@ -141,6 +141,13 @@ public class Linked_List
             addAtEnd((int)(Math.random()*100));
         printNodes();
     }
+    public void addSortedN(int n)
+    {
+        int start=(int)(Math.random()*100);
+        for(int i=1;i<=n;i++)
+            addAtEnd(start+i);
+        printNodes();
+    }
     public int getCountOfX(int x)
     {
         Node start=head;
