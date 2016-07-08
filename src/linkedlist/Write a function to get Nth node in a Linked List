@@ -1,0 +1,28 @@
+Write a function to get Nth node in a Linked List
+Write a GetNth() function that takes a linked list and an integer index and returns the data value stored in the node at that index position.
+
+Example:
+
+Input:  1->10->30->14,  index = 2
+Output: 30  
+The node at index 2 is 30
+
+/* Print he nth node in the linked list Node is defined as 
+struct node
+{
+    int data;
+    struct node* next;
+}; */
+
+// Should return data of node at given index. The function may
+//  assume that there are at least index+1 nodes in linked list
+int GetNth(struct node* head, int index)
+{
+struct node *start=head;
+  while(index>0)
+  {
+      start=start->next;
+      index--;
+  }
+return start->data;
+}
