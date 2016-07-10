@@ -1,0 +1,34 @@
+/*
+
+The structure of linked list is the following
+
+struct Node
+{
+int data;
+Node* next;
+};
+
+*/
+Node *compute(Node *head)
+{
+    std::stack<Node*> stk;
+    Node *start;
+    if(head==NULL)
+    return;
+    mystack.push(head);
+    start=head->next;
+    while(start!=NULL)
+    {
+        while(!stk.empty()&&start->data>(stk.top())->data)
+        {
+            stk.pop();
+        }
+        if(stk.empty())
+        head=start;
+        else
+        (stk.top())->next=start;
+        stk.push(start);
+        start=start->next;
+    }
+    return head;
+}

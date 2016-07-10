@@ -1,16 +1,3 @@
-Given only a pointer to a node to be deleted in a singly linked list, how do you delete it?
-Function to check if a singly linked list is palindrome
-Intersection point of two Linked Lists.
-Recursive function to print reverse of a Linked List
-Remove duplicates from a sorted linked list
-Remove duplicates from an unsorted linked list
-Pairwise swap elements of a given linked list
-Practice questions for Linked List and Recursion
-Move last element to front of a given Linked List
-Intersection of two Sorted Linked Lists
-Delete alternate nodes of a Linked List
-Alternating split of a given Singly Linked List
-Identical Linked Lists
 Merge Sort for Linked Lists
 Reverse a Linked List in groups of given size
 Reverse alternate K nodes in a Singly Linked List

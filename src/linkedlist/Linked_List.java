@@ -148,6 +148,30 @@ public class Linked_List
             addAtEnd(start+i);
         printNodes();
     }
+    public void addRandomN(int n,int range)//if range is too low it will add too much repetitions otherwise same as above
+    {
+        for(int i=1;i<=n;i++)
+            addAtEnd((int)(Math.random()*range));
+        printNodes();
+    }
+    public void addRepeatNSortedN(int n)//may add sorted calues too
+    {
+        int start=(int)(Math.random()*100);
+        for(int i=1;i<=n;i++)
+        {
+            int repeat=(int)(Math.random()*2);
+            addAtEnd(start+i*repeat);
+            start+=i*repeat;
+        }
+        printNodes();
+    }
+    public void mergeNode(Node listhead)
+    {
+        Node start=head;
+        while(start.next!=null)
+            start=start.next;
+        start.next=listhead;
+    }
     public int getCountOfX(int x)
     {
         Node start=head;

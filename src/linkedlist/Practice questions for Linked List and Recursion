@@ -1,0 +1,37 @@
+Practice questions for Linked List and Recursion
+Assume the structure of a Linked List node is as follows.
+
+struct node
+{
+  int data;
+  struct node *next;
+};
+
+Explain the functionality of following C functions.
+
+1. What does the following function do for a given Linked List?
+
+void fun1(struct node* head)
+{
+  if(head == NULL)
+    return;
+  
+  fun1(head->next);
+  printf("%d  ", head->data);
+}
+
+MY ANSWER: prints linked list on reverse order
+
+2. What does the following function do for a given Linked List ?
+
+void fun2(struct node* head)
+{
+  if(head== NULL)
+    return;
+  printf("%d  ", head->data); 
+ 
+  if(head->next != NULL )
+    fun2(head->next->next);
+  printf("%d  ", head->data);   
+}
+MY ANSWER: prints every second element from current and then prints again them again but in reverse order.
