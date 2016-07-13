@@ -26,24 +26,11 @@ Sorting can be used to reduce the time complexity to O(n*n). Following are the d
 
 public class FindATripletFromThreeLinkedListsWithSumEqualToAGivenNumber
 {
-    public static Node reverse(Node head)
-    {
-        Node current=head,prev=null,nextnode;
-        if(head==null)
-            return null;
-        while(current!=null)
-        {
-            nextnode=current.next;
-            current.next=prev;
-            prev=current;
-            current=nextnode;
-        }
-        return prev;
-    }
+    
     public static void findTriplets(Linked_List l1,Linked_List l2,Linked_List l3,int key)
     {
         Node head1=l1.head;
-        Node tempHead3=reverse(l3.head);
+        Node tempHead3=Util.reverse(l3.head);
         //Util.printFromNode(tempHead3);
         while(head1!=null)
         {

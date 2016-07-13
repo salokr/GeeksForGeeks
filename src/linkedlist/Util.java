@@ -11,6 +11,42 @@ package linkedlist;
  */
 public class Util
 {
+    public static Node reverse(Node head)
+    {
+        Node current=head,prev=null,nextnode;
+        if(head==null)
+            return null;
+        while(current!=null)
+        {
+            nextnode=current.next;
+            current.next=prev;
+            prev=current;
+            current=nextnode;
+        }
+        return prev;
+    }
+    public static linkedlists splitIntoTwo(Linked_List ll)
+    {
+        Node start=ll.head;
+        Node head1,head2;
+        if(start==null||start.next==null)
+            return new linkedlists(ll,null);
+        Node slow=start,fast=start;
+        while(fast!=null)
+        {
+            fast=fast.next;
+            if(fast!=null&&fast.next!=null)
+            {
+                slow=slow.next;
+                fast=fast.next;
+            }
+        }
+        head2=slow.next;
+        head1=start;slow.next=null;
+        Linked_List l1=new Linked_List(),l2=new Linked_List();
+        l1.head=head1;l2.head=head2;
+        return new linkedlists(l1,l2);
+    }
     public static void printFromNode(Node current)
     {
         while(current!=null)
