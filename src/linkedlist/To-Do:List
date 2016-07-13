@@ -1,21 +1,14 @@
-Find a triplet from three linked lists with sum equal to a given number
-Rotate a Linked List
 Flattening a Linked List
 Add two numbers represented by linked lists | Set 2
-Sort a linked list of 0s, 1s and 2s
 Flatten a multilevel linked list
-Delete N nodes after M nodes of a linked list
 QuickSort on Singly Linked List
-Merge a linked list into another linked list at alternate positions
-Pairwise swap elements of a given linked list by changing links
 Given a linked list of line segments, remove middle points
-Construct a Maximum Sum Linked List out of two Sorted Linked Lists having some Common nodes
-Can we reverse a linked list in less than O(n)?
 Clone a linked list with next and random pointer | Set 1
 Clone a linked list with next and random pointer | Set 2
-Insertion Sort for Singly Linked List
+
 Point to next higher value node in a linked list with an arbitrary pointer
-Rearrange a given linked list in-place.
+
+
 Sort a linked list that is sorted alternating ascending and descending orders?
 Select a Random Node from a Singly Linked List
 Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?
@@ -38,8 +31,3 @@ IMPORTANT HERE
 http://www.geeksforgeeks.org/category/linked-list/
 
 http://www.geeksforgeeks.org/data-structures/linked-list/
-
-
-
-
-
