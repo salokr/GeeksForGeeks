@@ -32,7 +32,10 @@ public class SegregateOddAndEven
 {
     public static void segregate(Linked_List ll)
     {
+        //check for nullity is required here
         Node end=ll.head;
+        if(end==null)
+            return;
         while(end.next!=null)
             end=end.next;
         Node originalend=end;

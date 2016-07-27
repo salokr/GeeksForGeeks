@@ -11,6 +11,30 @@ package linkedlist;
  */
 public class Util
 {
+    public static void merge(Node head1,Node head2,Linked_List ll)
+    {
+        Linked_List sorted=new Linked_List();
+        while(head1!=null&&head2!=null)
+        {
+            if(head1.data<head2.data)
+            {
+                sorted.addAtEnd(head1.data);
+                head1=head1.next;
+            }
+            else
+            {
+                sorted.addAtEnd(head2.data);
+                head2=head2.next;
+            }
+        }
+        if(head1!=null)
+            sorted.mergeNode(head1);
+        if(head2!=null)
+            sorted.mergeNode(head2);
+        //sorted.printNodes();
+        ll.head=sorted.head;
+    }
+    
     public static Node reverse(Node head)
     {
         Node current=head,prev=null,nextnode;

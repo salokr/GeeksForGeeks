@@ -1,35 +1,34 @@
+IMPORTANT HERE
+http://www.geeksforgeeks.org/category/linked-list/
+Topics Taken From here
+http://www.geeksforgeeks.org/data-structures/linked-list/
+
+
 Flattening a Linked List
 Add two numbers represented by linked lists | Set 2
 Flatten a multilevel linked list
 QuickSort on Singly Linked List
 Given a linked list of line segments, remove middle points
-Clone a linked list with next and random pointer | Set 1
-Clone a linked list with next and random pointer | Set 2
-
-Point to next higher value node in a linked list with an arbitrary pointer
-
-
-Sort a linked list that is sorted alternating ascending and descending orders?
-Select a Random Node from a Singly Linked List
-Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?
-Merge two sorted linked lists such that merged list is in reverse order
-Compare two strings represented as linked lists
-Rearrange a linked list such that all even and odd positioned nodes are together
-Rearrange a Linked List in Zig-Zag fashion
-Add 1 to a number represented as linked list
-Point arbit pointer to greatest value right side node in a linked list
-Merge two sorted linked lists such that merged list is in reverse order
-Convert a given Binary Tree to Doubly Linked List | Set
-Check if a linked list of strings forms a palindrome
-Sort linked list which is already sorted on absolute values
-Delete last occurrence of an item from linked list
-Delete a Linked List node at a given position
-Linked List in java
+Clone a linked list with next and random pointer | Set 1    <------V.V.IMP.
+Clone a linked list with next and random pointer | Set 2    <------V.V.IMP.
+Point to next higher value node in a linked list with an arbitrary pointer    <------V.V.IMP.
+Select a Random Node from a Singly Linked List  
+DONE BUT NOT IN ORDER:  Rearrange a Linked List in Zig-Zag fashion      <------V.V.IMP.
 
 
-IMPORTANT HERE
-http://www.geeksforgeeks.org/category/linked-list/
+Circular Linked List:
+Circular Linked List Introduction and Applications,
+Circular Linked List Traversal
+Split a Circular Linked List into two halves
+Sorted insert for circular linked list
+Doubly Linked List:
 
 
-Topics Taken From here
-http://www.geeksforgeeks.org/data-structures/linked-list/
+Doubly Linked List Introduction and Insertion
+Delete a node in a Doubly Linked List
+Reverse a Doubly Linked List
+The Great Tree-List Recursion Problem.
+Copy a linked list with next and arbit pointer
+QuickSort on Doubly Linked List
+Swap Kth node from beginning with Kth node from end in a Linked List
+Merge Sort for Doubly Linked List

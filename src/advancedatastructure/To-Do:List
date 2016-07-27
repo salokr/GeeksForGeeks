@@ -1,0 +1,84 @@
+Advanced Data Structure:
+
+Advanced Lists:
+
+Memory efficient doubly linked list
+XOR Linked List – A Memory Efficient Doubly Linked List | Set 1
+XOR Linked List – A Memory Efficient Doubly Linked List | Set 2
+Skip List | Set 1 (Introduction)
+Self Organizing List | Set 1 (Introduction)
+Trie:
+
+Trie | (Insert and Search)
+Trie | (Delete)
+Longest prefix matching – A Trie based solution in Java
+Print unique rows in a given boolean matrix
+How to Implement Reverse DNS Look Up Cache?
+How to Implement Forward DNS Look Up Cache?
+Suffix Array and Suffix Tree:
+
+Suffix Array Introduction
+Suffix Array nLogn Algorithm
+kasai’s Algorithm for Construction of LCP array from Suffix Array
+Suffix Tree Introduction
+Ukkonen’s Suffix Tree Construction – Part 1
+Ukkonen’s Suffix Tree Construction – Part 2
+Ukkonen’s Suffix Tree Construction – Part 3
+Ukkonen’s Suffix Tree Construction – Part 4,
+Ukkonen’s Suffix Tree Construction – Part 5
+Ukkonen’s Suffix Tree Construction – Part 6
+Generalized Suffix Tree
+Build Linear Time Suffix Array using Suffix Tree
+Substring Check
+Searching All Patterns
+Longest Repeated Substring,
+Longest Common Substring, Longest Palindromic Substring
+AVL Tree:
+
+AVL Tree | Set 1 (Insertion)
+AVL Tree | Set 2 (Deletion)
+AVL with duplicate keys
+Splay Tree:
+
+Splay Tree | Set 1 (Search)
+Splay Tree | Set 2 (Insert)
+B Tree:
+
+B-Tree | Set 1 (Introduction)
+B-Tree | Set 2 (Insert)
+B-Tree | Set 3 (Delete)
+Segment Tree:
+
+Segment Tree | Set 1 (Sum of given range)
+Segment Tree | Set 2 (Range Minimum Query)
+Lazy Propagation in Segment Tree
+Red-Black Tree:
+
+Red-Black Tree Introduction
+Red Black Tree Insertion.
+Red-Black Tree Deletion
+Program for Red Black Tree Insertion
+K Dimensional Tree:
+
+KD Tree (Search and Insert)
+K D Tree (Find Minimum)
+K D Tree (Delete)
+Others:
+
+Treap (A Randomized Binary Search Tree)
+Ternary Search Tree
+Interval Tree
+Implement LRU Cache
+Sort numbers stored on different machines
+Find the k most frequent words from a file
+Given a sequence of words, print all anagrams together
+Tournament Tree (Winner Tree) and Binary Heap
+Decision Trees – Fake (Counterfeit) Coin Puzzle (12 Coin Puzzle)
+Spaghetti Stack
+Data Structure for Dictionary and Spell Checker?
+Binary Indexed Tree
+Cartesian Tree
+Cartesian Tree Sorting
+Sparse Set
+Centroid Decomposition of Tree
+Gomory-Hu Tree

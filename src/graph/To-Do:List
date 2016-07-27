@@ -1,0 +1,119 @@
+Introduction, DFS and BFS:
+
+Graph and its representations
+Breadth First Traversal for a Graph
+Depth First Traversal for a Graph
+Applications of Depth First Search
+Applications of Breadth First Traversal
+Longest Path in a Directed Acyclic Graph
+Find Mother Vertex in a Graph
+Transitive Closure of a Graph using DFS
+Find K cores of an undirected Graph
+Iterative Depth First Search
+Iterative Deepening Search(IDS) or Iterative Deepening Depth First Search(IDDFS)
+Graph Cycle:
+
+Detect Cycle in a Directed Graph
+Detect Cycle in a an Undirected Graph
+Detect cycle in an undirected graph
+Detect cycle in a direct graph using colors
+Assign directions to edges so that the directed graph remains acyclic
+ 
+
+Topological Sorting:
+
+Topological Sorting
+All topological sorts of a Directed Acyclic Graph
+Kahn’s Algorithm for Topological Sorting
+Minimum Spanning Tree:
+
+Prim’s Minimum Spanning Tree (MST))
+Applications of Minimum Spanning Tree Problem
+Prim’s MST for Adjacency List Representation
+Kruskal’s Minimum Spanning Tree Algorithm
+Boruvka’s algorithm for Minimum Spanning Tree
+Steiner Tree
+BackTracking
+
+Find if there is a path of more than k length from a source
+Tug of War
+The Knight-Tour Problem
+Rat in a Maze
+n-Queen’s Problem
+m Coloring Problem
+Hamiltonian Cycle
+Shortest Paths:
+
+Dijkstra’s shortest path algorithm
+Dijkstra’s Algorithm for Adjacency List Representation
+Bellman–Ford Algorithm
+Floyd Warshall Algorithm
+Johnson’s algorithm for All-pairs shortest paths
+Shortest Path in Directed Acyclic Graph
+Some interesting shortest path questions,
+Shortest path with exactly k edges in a directed and weighted graph
+Dial’s Algorithm
+Printing paths in Dijsktra’s Algorithm
+Shortest path of a weighted graph where weight is 1 or 2
+Connectivity:
+
+Find if there is a path between two vertices in a directed graph
+Connectivity in a directed graph
+Articulation Points (or Cut Vertices) in a Graph
+Biconnected graph
+Bridges in a graph
+Eulerian path and circuit
+Fleury’s Algorithm for printing Eulerian Path or Circuit
+Strongly Connected Components
+Transitive closure of a graph
+Find the number of islands
+Count all possible walks from a source to a destination with exactly k edges
+Euler Circuit in a Directed Graph
+Biconnected Components
+Check if a given graph is tree or not
+Karger’s algorithm for Minimum Cut 
+Find if there is a path of more than k length
+Length of shortest chain to reach the target word
+Print all paths from a given source to destination
+Find minimum cost to reach destination using train
+Tarjan’s Algorithm to find strongly connected Components
+Hard Problems:
+
+Graph Coloring (Introduction and Applications)
+Greedy Algorithm for Graph Coloring
+Travelling Salesman Problem (Naive and Dynamic Programming)
+Travelling Salesman Problem (Approximate using MST)
+Hamiltonian Cycle
+Vertex Cover Problem | Set 1 (Introduction and Approximate Algorithm)
+K Centers Problem | Set 1 (Greedy Approximate Algorithm)
+Maximum Flow:
+
+Ford-Fulkerson Algorithm for Maximum Flow Problem
+Find maximum number of edge disjoint paths between two vertices
+Find minimum s-t cut in a flow network
+Maximum Bipartite Matching
+Channel Assignment Problem
+Push Relabel- Set 1-Introduction
+Push Relabel- Set 2- Implementation
+Karger’s Algorithm- Set 1- Introduction and Implementation
+Karger’s Algorithm- Set 2 – Analysis and Applications
+ STL Implementation of Algorithms
+
+Kruskal’s Minimum Spanning Tree using STL in C++
+Prim’s Algorithm using Priority Queue STL
+Dijkstra’s Shortest Path Algorithm using STL
+Dijkstra’s Shortest Path Algorithm using set in STL
+ Misc
+
+ Number of triangles in an undirected Graph
+Number of triangles in directed and undirected Graph
+Check whether a given graph is Bipartite or not
+Snake and Ladder Problem
+Minimize Cash Flow among a given set of friends who have borrowed money from each other
+Boggle (Find all possible words in a board of characters)
+Hopcroft Karp Algorithm for Maximum Matching-Introduction
+Hopcroft Karp Algorithm for Maximum Matching-Implementation
+Minimum Time to rot all oranges
+Find same contents in a list of contacts
+Optimal read list for a given number of days
+Print all jumping numbers smaller than or equal to a given value

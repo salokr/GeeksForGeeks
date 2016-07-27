@@ -1,0 +1,45 @@
+Matrix:
+
+Search in a row wise and column wise sorted matrix
+Print a given matrix in spiral form
+A Boolean Matrix Question
+Print unique rows in a given boolean matrix
+Maximum size square sub-matrix with all 1s
+Print unique rows in a given boolean matrix
+Inplace M x N size matrix transpose | Updated
+Print Matrix Diagonally
+Dynamic Programming | Set 27 (Maximum sum rectangle in a 2D matrix)
+Strassen’s Matrix Multiplication
+Create a matrix with alternating rectangles of O and X
+Find the row with maximum number of 1s
+Print all elements in sorted order from row and column wise sorted matrix
+Given an n x n square matrix, find sum of all sub-squares of size k x k
+Count number of islands where every island is row-wise and column-wise separated
+Find a common element in all rows of a given row-wise sorted matrix
+Given a matrix of ‘O’ and ‘X’, replace ‘O’ with ‘X’ if surrounded by ‘X’
+Find the longest path in a matrix with given constraints
+Given a Boolean Matrix, find k such that all elements in k’th row are 0 and k’th column are 1.
+Find the largest rectangle of 1’s with swapping of columns allowed
+Validity of a given Tic-Tac-Toe board configuration
+Minimum Initial Points to Reach Destination
+Find length of the longest consecutive path from a given starting character
+Collect maximum points in a grid using two traversals
+Rotate Matrix Elements
+Find sum of all elements in a matrix except the elements in row and/or column of given cell?
+Find a common element in all rows of a given row-wise sorted matrix
+Number of paths with exactly k coins
+Collect maximum coins before hitting a dead end
+Program for Rank of Matrix
+Submatrix Sum Queries
+Maximum size rectangle binary sub-matrix with all 1s
+Count Negative Numbers in a Column-Wise and Row-Wise Sorted Matrix
+Construct Ancestor Matrix from a Given Binary Tree
+Construct tree from ancestor matrix
+In-place convert matrix in specific order
+Common elements in all rows of a given matrix
+Print maximum sum square sub-matrix of given size
+Find a specific pair in Matrix
+Find orientation of a pattern in a matrix
+Shortest path in a Binary Maze
+Inplace rotate square matrix by 90 degrees
+Return previous element in an expanding matrix
