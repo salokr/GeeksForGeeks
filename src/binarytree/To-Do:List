@@ -1,13 +1,3 @@
-Binary Tree Introduction
-Handshaking Lemma and Interesting Tree Properties
-Binary Tree Properties
-Types of Binary Tree
-Enumeration of Binary Tree
-Applications of tree data structure
-Tree Traversals
-BFS vs DFS for Binary Tree
-Level Order Tree Traversal
-Print level order traversal line by line
 Inorder Tree Traversal without Recursion
 Inorder Tree Traversal without recursion and without stack!
 Threaded Binary Tree
@@ -114,3 +104,53 @@ Check whether a binary tree is a complete tree or not | Set 2 (Recursive Solutio
 Change a Binary Tree so that every node stores sum of all nodes in left subtree
 Iterative Search for a key ‘x’ in Binary Tree
  Find maximum (or minimum) in Binary Tree
+
+
+
+
+
+
+67
+down vote
+Although this popular answer will give you your desired indexing syntax, it is doubly inefficient: big and slow both in space and time. There's a better way.
+
+Why That Answer is Big and Slow
+
+The proposed solution is to create a dynamic array of pointers, then initializing each pointer to its own, independent dynamic array. The advantage of this approach is that it gives you the indexing syntax you're used to, so if you want to find the value of the matrix at position x,y, you say:
+
+int val = matrix[ x ][ y ];
+This works because matrix[x] returns a pointer to an array, which is then indexed with [y]. Breaking it down:
+
+int* row = matrix[ x ];
+int  val = row[ y ];
+Convenient, yes? We like our [ x ][ y ] syntax.
+
+But the solution has a big disadvantage, which is that it is both fat and slow.
+
+Why?
+
+The reason that it's both fat and slow is actually the same. Each "row" in the matrix is a separately allocated dynamic array. Making a heap allocation is expensive both in time and space. The allocator takes time to make the allocation, sometimes running O(n) algorithms to do it. And the allocator "pads" each of your row arrays with extra bytes for bookkeeping and alignment. That extra space costs...well...extra space. The deallocator will also take extra time when you go to deallocate the matrix, painstakingly free-ing up each individual row allocation. Gets me in a sweat just thinking about it.
+
+There's another reason it's slow. These separate allocations tend to live in discontinuous parts of memory. One row may be at address 1,000, another at address 100,000—you get the idea. This means that when you're traversing the matrix, you're leaping through memory like a wild person. This tends to result in cache misses that vastly slow down your processing time.
+
+So, if you absolute must have your cute [x][y] indexing syntax, use that solution. If you want quickness and smallness (and if you don't care about those, why are you working in C++?), you need a different solution.
+
+A Different Solution
+
+The better solution is to allocate your whole matrix as a single dynamic array, then use (slightly) clever indexing math of your own to access cells. The indexing math is only very slightly clever; nah, it's not clever at all: it's obvious.
+
+class Matrix
+{
+    ...
+    size_t index( int x, int y ) const { return x + m_width * y; }
+};
+Given this index() function (which I'm imagining is a member of a class because it needs to know the m_width of your matrix), you can access cells within your matrix array. The matrix array is allocated like this:
+
+array = new int[ width * height ];
+So the equivalent of this in the slow, fat solution:
+
+array[ x ][ y ]
+...is this in the quick, small solution:
+
+array[ index( x, y )]
+Sad, I know. But you'll get used to it. And your CPU will thank you.
