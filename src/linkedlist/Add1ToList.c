@@ -7,7 +7,7 @@ struct Node* next;
 };
 void add(int x,struct Node **head)
 {
-	struct Node *newnode=(struct Node*)malloc(sizeof(struct Node*)),*start;
+	struct Node *newnode=(struct Node*)malloc(sizeof(struct Node)),*start;
 	newnode->data=x;
 	newnode->next=NULL;
 	if(*head==NULL)
@@ -40,7 +40,7 @@ struct Node* add1(struct Node* head)
 	int result=addWithCarry(head);
 	if(result)
 	{
-		struct Node *newnode=(struct Node*)malloc(sizeof(struct Node*));
+		struct Node *newnode=(struct Node*)malloc(sizeof(struct Node));
 		newnode->data=result;
 		newnode->next=head;
 		head=newnode;

@@ -33,7 +33,7 @@ struct node* flatten(struct node* root)
 }
 struct node* getNode(int data)
 {
-	struct node* bottom=(struct node*)malloc(sizeof(struct node*));
+	struct node* bottom=(struct node*)malloc(sizeof(struct node));
 	bottom->next=NULL;
 	bottom->bottom=NULL;
 	return bottom;

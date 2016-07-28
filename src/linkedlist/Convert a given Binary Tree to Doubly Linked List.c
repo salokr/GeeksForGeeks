@@ -35,7 +35,7 @@ myprev=NULL;
 
 struct Node* newNode(int data)
 {
-    struct Node* new_node = (struct Node*) malloc(sizeof(struct Node*));
+    struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
     new_node->data = data;
     new_node->left = NULL;new_node->right = NULL;
     return (new_node);

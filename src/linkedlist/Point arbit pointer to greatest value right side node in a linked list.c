@@ -8,7 +8,7 @@ struct Node
 
 void add(int x,struct Node **head)
 {
-	struct Node *newnode=(struct Node*)malloc(sizeof(struct Node*)),*start;
+	struct Node *newnode=(struct Node*)malloc(sizeof(struct node)),*start;
 	newnode->data=x;
 	newnode->next=NULL;
 	newnode->arbit=NULL;
