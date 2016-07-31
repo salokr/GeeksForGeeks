@@ -12,7 +12,7 @@ import java.util.Queue;
  *
  * @author ashutosh
  */
-public class BinaryTree 
+public class BinaryTree implements Cloneable
 {
     Node root;
     /**
@@ -85,11 +85,15 @@ public class BinaryTree
     {
         for(int i=0;i<n;i++)
             addFirst((int)(Math.random()*100));
+        inorder(root);
+        System.out.println();
     }
     void addSortedN(int n)
     {
         for(int i=0;i<n;i++)
             addFirst(i+1);
+        inorder(root);
+        System.out.println();
     }
     int getHeight(Node current)
     {
@@ -99,6 +103,10 @@ public class BinaryTree
         int righth=getHeight(current.right);
         int max=lefth>righth?lefth:righth;
         return max+1;
+    }
+    public Object clone()throws CloneNotSupportedException
+    {
+        return super.clone();
     }
 }
 class Node
@@ -113,6 +121,6 @@ class Node
     @Override
     public String toString()
     {
-        return data+" ";
+        return data+"";
     }
 }
