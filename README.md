@@ -310,14 +310,11 @@ When `--annotate_schema=True`, we generate prompts like:
 
 ```python
 @dataclass
-class Die(LifeEvent):
-    """the event def"""
-    mention: str  # ... definition of argument
-    place: List   # ... definition of argument
-    instrument: List  # ... definition of argument
-    victim: List  # ... definition of argument
-    person: List  # ... definition of argument
-    agent: List   # ... definition of argument
+class Event(ParentEvent):
+    """the event definition"""
+    mention: str  # Event trigger definition
+    arg_1: List   # Definition of argument 1
+    arg_2: List   # Definition of argument 2
 ```
 
 This format supports **LLM-compatible** structure learning and improves interpretability.
@@ -337,13 +334,13 @@ Your `guideline_file` should look like:
     ],
     "attributes": {
       "mention": "Trigger span of the event.",
-      "agent": "Entity responsible for the event."
+      "arg_1": ["One definition for arg_1", "another definition for arg_1"]
     }
   }
 }
 ```
 
-This enables *randomized sampling* during conversion to avoid overfitting to one phrasing—an approach highlighted in our arXiv/ACL paper.
+This enables *randomized sampling* during conversion to avoid overfitting to one phrasing—an approach highlighted in our arXiv paper.
 
 ---
 
@@ -352,5 +349,59 @@ This enables *randomized sampling* during conversion to avoid overfitting to one
 ⓶ Use `--add_negative_samples` if you want to add negative sample per instance similar to DEGREE.
 
 
+## 🧪 Evaluation
 
+Once you've trained your model to generate Python-style event prompts, you can use our evaluation suite in `code_evaluation/` to compute standard **precision, recall, and F1 scores** via exact-match comparison of predicted and gold structured outputs.
+
+### 📁 Directory Overview
+```
+code_evaluation/
+├── all_ee_definitions.py     # Event classes copied from schema generation (Step 1)
+├── event_scorer.py           # 🔥 Main evaluation logic
+├── utils_typing.py           # (Attribution to GoLLIE — type helper module)
+```
+
+---
+
+### 📊 `event_scorer.py`: Evaluation in a Nutshell
+
+The core script compares model-generated code prompts with gold ones using Python object introspection.
+
+#### ✅ Key Features:
+- Extracts arguments from predicted and gold event objects
+- Computes **micro/macro F1** across all examples
+- Identifies:
+  - **Trigger-level mismatches**
+  - **Argument-level hallucinations**
+- Logs detailed stats (TP / FP / FN per role)
+
+#### 🎯 Core Functions:
+- `compute_f1(...)`: calculates precision, recall, and F1 from match counts
+- `extract_objects(...)`: extracts fields except for `mention` to compare arguments
+- `micro_ed_scores`: calculate micro f1 score on Event Detection task
+- `micro_eae_scores`: calculate micro f1 score on Event Argument Extraction task
+- `micro_e2e_scores`: calculate micro f1 score on End-to-End Event Extraction task
+- `log_hallucinations_and_mismatches(...)`: logs mismatches like hallucinated roles
+
+---
+
+### 🧪 Run the Demo Evaluation
+
+We provide a ready-to-run example in:
+
+```
+demo/e2e_demo.json
+```
+
+This file contains three illustrative cases:
+- ✅ One fully correct prediction
+- 🟡 One partially correct
+- ❌ One incorrect
+
+To run the evaluation:
+
+```bash
+cd code_evaluation
+python event_scorer.py --input_file ./../demo/e2e_demo.json
+```
 
